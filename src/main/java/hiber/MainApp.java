@@ -32,13 +32,11 @@ public class MainApp {
          System.out.println();
       }
 
-      List <User> userByCar = userService.getUser("nissan", 5);
-      for (User user: userByCar){
+      User userByCar = userService.getUser("nissan", 5);
          System.out.println("Владельцем машины по выбранным критериям:");
-         System.out.println("CarModel: " + user.getCar().getModel());
-         System.out.println("CarSeries: " + user.getCar().getSeries());
-         System.out.println("Является пользователь: " + user);
-      }
+         System.out.println("CarModel: " + userByCar.getCar().getModel());
+         System.out.println("CarSeries: " + userByCar.getCar().getSeries());
+         System.out.println("Является пользователь: " + userByCar);
 
       context.close();
    }
